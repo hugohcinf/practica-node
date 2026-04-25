@@ -20,6 +20,7 @@ app.post('/registro',(req,res) => {
         res.send("Registro exitoso");
     });
 });
-app.listen(3000,()=>{
-    console.log("Servidor en ejecución http://localhost:3000");
+const port = process.env.PORT || 3000;
+app.listen(port,()=>{
+    console.log("Servidor en ejecución en el puerto ${port}");
 });
